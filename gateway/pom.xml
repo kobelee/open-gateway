@@ -4,13 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.kobelee</groupId>
     <artifactId>gateway</artifactId>
     <version>0.1</version>
-
+    <description>open gateway, the gateway itself</description>
+    <parent>
+        <artifactId>open-gateway</artifactId>
+        <groupId>cn.kobelee</groupId>
+        <version>0.1</version>
+    </parent>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+
+    </dependencies>
 
 </project>
