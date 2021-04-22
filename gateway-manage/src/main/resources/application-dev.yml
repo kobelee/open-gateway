@@ -3,5 +3,4 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/open-gateway-manage?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf8&connectTimeout=3000
     username: kobelee
-    password: wo4superboyLYX
-
+    password: kobelee

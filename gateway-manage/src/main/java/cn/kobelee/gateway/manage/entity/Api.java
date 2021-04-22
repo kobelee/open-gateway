@@ -3,10 +3,7 @@ package cn.kobelee.gateway.manage.entity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,6 +20,7 @@ public class Api implements Serializable {
     @Id
     @ApiModelProperty("pk")
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     /**
