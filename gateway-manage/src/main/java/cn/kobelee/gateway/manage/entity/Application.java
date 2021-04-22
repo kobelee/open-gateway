@@ -2,28 +2,20 @@ package cn.kobelee.gateway.manage.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.Date;
 
 @Data
 @Entity
 @Table(name = "application")
-public class Application implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class Application extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * pk
-     */
-    @Id
-    @ApiModelProperty("pk")
-    @Column(name = "id", nullable = false)
-    private Long id;
 
     /**
      * 应用编码
@@ -48,20 +40,5 @@ public class Application implements Serializable {
 
     @Column(name = "application_desc")
     private String applicationDesc;
-
-    @Column(name = "create_time")
-    private Date createTime;
-
-    @Column(name = "update_time")
-    private Date updateTime;
-
-    @Column(name = "record_version")
-    private Integer recordVersion;
-
-    @Column(name = "creator")
-    private String creator;
-
-    @Column(name = "updater")
-    private String updater;
 
 }

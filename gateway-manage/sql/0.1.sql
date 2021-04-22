@@ -1,7 +1,7 @@
 CREATE DATABASE `open-gateway-manage`;
-use open-gateway-manage;
+use `open-gateway-manage`;
 CREATE TABLE `application` (
-    `id` bigint(20) NOT NULL COMMENT 'pk',
+    `id` bigint(20) NOT NULL auto_increment COMMENT 'pk' ,
     `application_code` varchar(30) DEFAULT NULL COMMENT '应用编码',
     `application_name` varchar(50) DEFAULT NULL COMMENT '应用名',
     `entry_url` varchar(200) DEFAULT NULL COMMENT '入口url,例: http://a.com/service',
@@ -16,7 +16,7 @@ CREATE TABLE `application` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `api_consumer` (
-    `id` bigint(20) NOT NULL COMMENT 'pk',
+    `id` bigint(20) NOT NULL auto_increment COMMENT 'pk' ,
     `consumer_code` varchar(30) DEFAULT NULL COMMENT '接口消费者编码',
     `consumer_name` varchar(30) DEFAULT NULL COMMENT '接口消费者名称',
     `consumer_desc` varchar(255) DEFAULT NULL COMMENT '消费者描述',
@@ -35,7 +35,7 @@ CREATE TABLE `api_consumer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `api` (
-    `id` bigint(20) NOT NULL COMMENT 'pk',
+    `id` bigint(20) NOT NULL auto_increment COMMENT 'pk',
     `api_code` varchar(30) DEFAULT NULL COMMENT '接口编码',
     `api_name` varchar(30) DEFAULT NULL COMMENT '接口名称',
     `api_desc` varchar(255) DEFAULT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `api` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `api_subscribe` (
-    `id` bigint(20) NOT NULL COMMENT 'pk',
+    `id` bigint(20) NOT NULL auto_increment COMMENT 'pk',
     `api_id` bigint(20) DEFAULT NULL COMMENT '接口id,api.id关联',
     `application_id` bigint(20) DEFAULT NULL COMMENT '应用id,application.id关联',
     `api_consumer_id` bigint(20) DEFAULT NULL COMMENT '消费者id, api_consumer.id关联',
@@ -78,7 +78,7 @@ CREATE TABLE `api_subscribe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `api_subscribe_config` (
-    `id` bigint(20) NOT NULL COMMENT 'pk',
+    `id` bigint(20) NOT NULL auto_increment COMMENT 'pk',
     `config_code` varchar(20) DEFAULT NULL COMMENT '配置编码',
     `config_name` varchar(50) DEFAULT NULL COMMENT '配置名',
     `config_desc` varchar(300) DEFAULT NULL COMMENT '配置描述',

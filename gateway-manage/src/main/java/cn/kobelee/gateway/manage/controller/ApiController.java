@@ -42,4 +42,9 @@ public class ApiController implements IController {
         return success(apiService.saveOne(api));
     }
 
+    @PutMapping
+    @ApiOperation("更新")
+    public R<Api> update(@RequestBody Api api){
+        return success(apiService.update(api));
+    }
 }

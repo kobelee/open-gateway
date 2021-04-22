@@ -29,12 +29,17 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public Page<Api> page(int pageIndex, int pageSize) {
-        PageRequest pageRequest = PageRequest.of(pageIndex, pageSize, Sort.Direction.ASC, "id");
+        PageRequest pageRequest = PageRequest.of(pageIndex -1, pageSize, Sort.Direction.ASC, "id");
         return repository.findAll(pageRequest);
     }
 
     @Override
     public Api saveOne(Api api) {
+        return repository.save(api);
+    }
+
+    @Override
+    public Api update(Api api) {
         return repository.save(api);
     }
 }

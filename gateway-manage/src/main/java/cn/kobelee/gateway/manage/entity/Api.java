@@ -2,26 +2,19 @@ package cn.kobelee.gateway.manage.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 @Data
 @Entity
 @Table(name = "api")
-public class Api implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class Api extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * pk
-     */
-    @Id
-    @ApiModelProperty("pk")
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
 
     /**
      * 接口编码
@@ -102,20 +95,5 @@ public class Api implements Serializable {
     @ApiModelProperty("接口版本")
     @Column(name = "api_version")
     private String apiVersion;
-
-    @Column(name = "create_time")
-    private Date createTime;
-
-    @Column(name = "update_time")
-    private Date updateTime;
-
-    @Column(name = "record_version")
-    private Integer recordVersion;
-
-    @Column(name = "creator")
-    private String creator;
-
-    @Column(name = "updater")
-    private String updater;
 
 }

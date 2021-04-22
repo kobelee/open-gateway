@@ -17,4 +17,6 @@ public interface ApiService {
     Page<Api> page(int pageIndex, int pageSize);
 
     Api saveOne(Api api);
+
+    Api update(Api api);
 }
