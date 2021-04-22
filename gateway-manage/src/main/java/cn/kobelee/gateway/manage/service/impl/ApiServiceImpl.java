@@ -6,7 +6,6 @@ import cn.kobelee.gateway.manage.service.ApiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +28,7 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public Page<Api> page(int pageIndex, int pageSize) {
-        PageRequest pageRequest = PageRequest.of(pageIndex -1, pageSize, Sort.Direction.ASC, "id");
+        PageRequest pageRequest = PageRequest.of(pageIndex - 1, pageSize, Sort.Direction.ASC, "id");
         return repository.findAll(pageRequest);
     }
 
