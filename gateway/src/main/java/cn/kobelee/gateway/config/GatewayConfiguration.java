@@ -1,5 +1,7 @@
 package cn.kobelee.gateway.config;
 
+import cn.kobelee.gateway.cache.RouteConfigHolder;
+import cn.kobelee.gateway.feign.OpenGatewayManageFeignClient;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
@@ -50,12 +52,12 @@ public class GatewayConfiguration {
         return new HttpMessageConverters(fastConverter);
     }
 
-/*    @Bean
+    @Bean
     public RouteConfigHolder routeConfigHolder(OpenGatewayManageFeignClient openGatewayManageFeignClient){
         RouteConfigHolder routeConfigHolder = new RouteConfigHolder();
         routeConfigHolder.setOpenGatewayManageFeignClient(openGatewayManageFeignClient);
         return routeConfigHolder;
-    }*/
+    }
 
 
 

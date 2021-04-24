@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: open-gateway
+  profiles:
+    active: dev

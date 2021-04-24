@@ -1,6 +1,6 @@
 package cn.kobelee.gateway.config;
 
-import com.cbest.open.gateway.filters.global.RouteToRequestUrlFilterWrapper;
+import cn.kobelee.gateway.filter.global.RouteToRequestUrlFilterWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

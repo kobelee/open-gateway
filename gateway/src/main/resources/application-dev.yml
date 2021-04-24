@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+open-gateway:
+  route-config:
+    max-cache-size: 512
+    expire-secs: 30`

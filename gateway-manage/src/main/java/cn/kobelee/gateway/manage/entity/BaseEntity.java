@@ -14,7 +14,7 @@ import java.util.Date;
  * Description:
  *
  * @author Yuxiang Li
- * @email yuxiang.li@sjgo365.com
+ * @email kobe663@gmail.com
  * @date 4/22/2021
  */
 @MappedSuperclass

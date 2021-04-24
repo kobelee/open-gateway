@@ -14,7 +14,7 @@ import java.util.List;
  * Description:
  *
  * @author Yuxiang Li
- * @email yuxiang.li@sjgo365.com
+ * @email kobe663@gmail.com
  * @date 12/23/2020
  */
 @FeignClient(name = "open-gateway-manage")
